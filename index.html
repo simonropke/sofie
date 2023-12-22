@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frohe Weihnachten</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f0f0f0; /* Hintergrundfarbe */
+            background-image: url('https://media.istockphoto.com/id/520042571/de/foto/weihnachten-kamin-baum-str%C3%BCmpfe-feuer-hearth-lichtern-und-dekorationen.jpg?s=612x612&w=0&k=20&c=_M4b0S7Z0HExofiRSitrui0z4sqYR_qD2pYONy3qVy8='); /* Bild für den Hintergrund */
+            background-size: cover; /* Bild auf die gesamte Seite ausdehnen */
+        }
+
+        #textInput {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #actionButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h1{
+            background-color: #f0f0f0;
+        }
+
+        p{
+            background-color: #f0f0f0;
+        }
+
+        a{
+            background-color: #f0f0f0;
+            visibility: hidden;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <br><br>
+    <h1>Frohe Weihnachten</h1>
+
+    <input type="text" id="textInput" placeholder="Passwort">
+
+    <button id="actionButton" onclick="zeigeText()">Enter</button>
+
+    <br><br>
+    <a id="aText" href="https://www.booking.com/hotel/de/gasthof-diem.de.html?aid=898224&app_hotel_id=74437&checkin=2024-01-12&checkout=2024-01-12&from_sn=ios&group_adults=1&label=booking_confirmation-NOndFp%401703254286">Hier der Link</a>
+
+    <script>
+        let einmal = true;
+        function zeigeText() {
+            
+            if (document.getElementById("textInput").value == 'mein schatzi' && einmal) {
+                const para = document.createElement("p");
+                const node = document.createTextNode("Hallo Sofie, ersteinmal Frohe Weihnachten ich wünsche dir alles gute und freue mich so sehr das du wieder hier bist. War ja jetzt auch lange genug ;). Auf dein Geschenk hast du jetzt ja auch schon lange genug gewartet, ich hoffe du warst nicht zu enttäuscht beim aufmachen von dem Karton. Aber nach dem du jetzt schon so lange darauf gewartet hast, nämlich etwa 4,5 Monate musste das Rätzel zuende gehen. Ursprünglich war die Seite zwar für etwas anderes gedacht aber du kennst mich ja und ich hoffe so bereite ich dir damit noch mal eine freude und kann das Rätzel zufriedenstellend zuende kommen lassen. Also was ist dein Geschenk? Du schreibst ja jetzt deine Bachelor Arbeit hier in Freising deswegen dachte ich müssen wir uns das Algeu eben noch mal so angucken. Du kannst dir ja sicher denken wann. Also am 12.01 kannst du mir dann auch die richte Sauna etikette zeigen. Hier drüber ein Link und ich hoffe das du dich freust. Du legst ja großen wert drauf das wir zusammen Dinge machen und an diesem Wochenende machen wir das dann. Zwar ist das nicht die große Tour auf die ich mich schon freue aber die kommt ja dann im Sommer wenn wir unsere Spanien Tour machen. Ich liebe dich und freue mich die Zeit mit dir zu verbringen <3  p.s. unseren Spanien Urlaub habe ich zwar damals schon angefangen zu planen aber das machen wir dann zusammen zuende.");
+
+                para.appendChild(node);
+                document.body.appendChild(para);
+
+                einmal = false;
+
+                document.getElementById("aText").style.visibility = 'visible';
+            }
+        }
+    </script>
+
+</body>
+</html>
